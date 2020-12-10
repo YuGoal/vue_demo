@@ -50,12 +50,17 @@
   background: #f7f7f7;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 14px;
   font-weight: 550;
   padding: 10px 14px;
   font-family: Microsoft soft;
   color: #d2d2d2;
+  height: 24px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -93,6 +98,10 @@
 
 .btn_submit:hover {
   background: #4e7cee;
+}
+
+.btn_submit:disabled {
+  background: #cedcfb;
 }
 
 .msg_box {
@@ -173,6 +182,7 @@
 }
 
 .btn_text {
+  text-decoration: none;
   outline-style: none;
   border-radius: 8px;
   margin-top: 14px;
@@ -189,8 +199,35 @@
 .bottom_box {
   margin-top: 4px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
   height: 50px;
   overflow: auto;
 }
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  width: 32px;
+  height: 32px;
+  background: url("/static/images/loading-global1.gif") no-repeat;
+}
+
+.pwd_input {
+  border: 0px;
+  outline-style: none;
+  background: #f7f7f7;
+  font-size: 14px;
+  font-family: Microsoft soft;
+  color: #d2d2d2;
+}
+
+.pwd_icon {
+
+  width: 40px;
+  height: 40px;
+}
+
