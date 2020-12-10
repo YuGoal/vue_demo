@@ -5,10 +5,12 @@
       <div class="title">
         <img class="title_img" src="static/images/login_title1.png">
         <h4 class="title_text">使用 Smartisan ID 登录官网</h4>
-        <input class="input" type="text" @input="inputAccout" v-model="accout" placeholder="请输入账号">
+        <input
+          class="input" maxlength="11" type="text" @input="inputAccout" v-model="accout" placeholder="请输入账号">
 
         <div class="input">
-          <input class="pwd_input" :type="pwdType?'password':'text'" @input="inputAccout" v-model="password"
+          <input maxlength="20" class="pwd_input" :type="pwdType?'password':'text'" @input="inputAccout"
+                 v-model="password"
                  placeholder="请输入密码">
           <img class="pwd_icon" :src="pwdType?unseenImg :seenImg " @click="changePwdType">
         </div>
@@ -33,7 +35,8 @@
           <a class="btn_text" target="_blank"
              href="https://resource.smartisan.com/docs/smartisan_os_legal_statement_cn.html">&#8194用户协议&#8194</a>
           <label class="btn_chekbox_label">和&#8194</label>
-          <label class="btn_text">隐私政策</label>
+          <a class="btn_text" target="_blank"
+             href="https://resource.smartisan.com/docs/smartisan_os_privacy_policy_cn.html">隐私政策</a>
         </div>
       </div>
 
@@ -55,7 +58,8 @@ export default {
       showLoading: false,//登录加载框
       pwdType: true,//密码显示
       seenImg: ("/static/images/visibility.png"),//密码显示图片
-      unseenImg: ("/static/images/un-visibility.png") //密码隐藏图片
+      unseenImg: ("/static/images/un-visibility.png"), //密码隐藏图片
+      loginBean: null
     }
   },
   mounted() {
@@ -86,8 +90,12 @@ export default {
           'account': this.accout,
           'password': this.password
         }).then(res => {
-          const resp = res.data;
-          this.$notify.success({title: '登录', message: resp})
+          this.loginBean = res.data
+          if (this.loginBean.code == 200) {
+            localStorage.userData = this.loginBean.data
+          } else {
+            this.$notify.success({title: '登录', message: this.loginBean.msg})
+          }
           this.showLoading = false
         }).catch(res => {
           this.$notify.error({title: '登录', message: res.data()})
