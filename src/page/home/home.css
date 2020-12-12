@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 13pt;
+}
+
+.header_topbar {
+  background: linear-gradient(90deg,#222325,#3b3c3f,#222325);
+}
+
+.nav {
+  height: 45px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_ul {
+  display: inline;
+  white-space: nowrap;
+}
+
+.nav_li {
+  font-style: normal;
+  color: #ffffffB3;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  float: left;
+}
+

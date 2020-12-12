@@ -80,6 +80,9 @@ export default {
   },
   methods: {
     login() {
+      this.$router.replace({
+        path:'/home'
+      })
       if (this.accout === '') {
         this.$notify.error({title: '登录', message: '账号不能为空'})
       } else if (this.password === '') {
