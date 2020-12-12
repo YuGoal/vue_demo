@@ -1,22 +1,25 @@
 <template>
   <div>
     <div class="header_topbar">
+      <div class="topbar_logo"/>
+
       <div class="nav">
         <ul class="nav_ul">
-          <li class="nav_li">在线商城</li>
-          <li class="nav_li">坚果R2</li>
-          <li class="nav_li">Smartisan TNT go</li>
-          <li class="nav_li">坚果 TNT 工作站</li>
-          <li class="nav_li">Smartisan OS</li>
-          <li class="nav_li">欢喜云</li>
-          <li class="nav_li">应用</li>
-          <li class="nav_li">论坛</li>
-          <li class="nav_li">开发者支持</li>
-          <li class="nav_li">荣誉与奖项</li>
-          <li class="nav_li">加入我们</li>
-          <li class="nav_li">下载App</li>
+          <li>在线商城</li>
+          <li>坚果R2</li>
+          <li>Smartisan TNT go</li>
+          <li>坚果 TNT 工作站</li>
+          <li>Smartisan OS</li>
+          <li>欢喜云</li>
+          <li>应用</li>
+          <li>论坛</li>
+          <li>开发者支持</li>
+          <li>荣誉与奖项</li>
+          <li>加入我们</li>
+          <li>下载App</li>
         </ul>
       </div>
+      <div class="topbar_user"/>
     </div>
 
   </div>
