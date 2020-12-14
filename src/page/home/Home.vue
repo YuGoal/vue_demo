@@ -23,11 +23,12 @@
         <div class="topbar_user"/>
         <el-popover
           placement="top-start"
-          visible-arrow = false
-          title="标题"
-          width="200"
-          trigger="hover"
-          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+          visible-arrow=false
+          width="300"
+          trigger="hover">
+          <div>
+
+          </div>
           <el-button slot="reference" class="topbar_cart"/>
         </el-popover>
 
