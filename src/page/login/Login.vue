@@ -80,9 +80,6 @@ export default {
   },
   methods: {
     login() {
-      this.$router.replace({
-        path:'/home'
-      })
       if (this.accout === '') {
         this.$notify.error({title: '登录', message: '账号不能为空'})
       } else if (this.password === '') {
@@ -96,8 +93,11 @@ export default {
           this.loginBean = res.data
           if (this.loginBean.code == 200) {
             localStorage.userData = this.loginBean.data
+            this.$router.replace({
+              path: '/home'
+            })
           } else {
-            this.$notify.success({title: '登录', message: this.loginBean.msg})
+            this.$notify.error({title: '登录', message: this.loginBean.msg})
           }
           this.showLoading = false
         }).catch(res => {
