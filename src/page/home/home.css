@@ -71,3 +71,48 @@
   background-size: 200%;
 }
 
+.cart {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadada;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cart_img {
+  height: 62px;
+  width: 76px;
+  background-image: url("/static/images/chart.png");
+}
+
+.cart_tips1 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #3b3c3f;
+
+}
+.cart_tips2 {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #d2d2d2;
+}
+.user{
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadada;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popoverBackB{
+  background: transparent;
+}
+

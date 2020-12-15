@@ -20,14 +20,26 @@
         </ul>
       </div>
       <div class="topbar_r">
-        <div class="topbar_user"/>
+        <el-popover
+          class="popoverBackB"
+          placement="top-start"
+          visible-arrow="false"
+          width="80"
+          trigger="hover" >
+          <div class="user">
+
+          </div>
+          <el-button slot="reference" class="topbar_user"/>
+        </el-popover>
         <el-popover
           placement="top-start"
-          visible-arrow=false
+          visible-arrow="false"
           width="300"
           trigger="hover">
-          <div>
-
+          <div class="cart">
+            <div class="cart_img"/>
+            <div class="cart_tips1">购物车为空</div>
+            <div class="cart_tips2">您还没有选购任何商品，现在前往商城选购吧！</div>
           </div>
           <el-button slot="reference" class="topbar_cart"/>
         </el-popover>
