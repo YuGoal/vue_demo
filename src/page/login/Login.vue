@@ -1,7 +1,7 @@
 <template>
 
   <div class="login_bg">
-    <div class="dialog_box">
+    <div class="dialog_box shadow_bg">
       <div class="title">
         <img class="title_img" src="static/images/login_title1.png">
         <h4 class="title_text">使用 Smartisan ID 登录官网</h4>

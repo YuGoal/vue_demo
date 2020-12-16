@@ -20,35 +20,26 @@
         </ul>
       </div>
       <div class="topbar_r">
-        <el-popover
-          class="popoverBackB"
-          placement="top-start"
-          visible-arrow="false"
-          width="80"
-          trigger="hover" >
-          <div class="user">
-
-          </div>
-          <el-button slot="reference" class="topbar_user"/>
-        </el-popover>
-        <el-popover
-          placement="top-start"
-          visible-arrow="false"
-          width="300"
-          trigger="hover">
-          <div class="cart">
-            <div class="cart_img"/>
-            <div class="cart_tips1">购物车为空</div>
-            <div class="cart_tips2">您还没有选购任何商品，现在前往商城选购吧！</div>
-          </div>
-          <el-button slot="reference" class="topbar_cart"/>
-        </el-popover>
-
+        <div class="topbar_user" v-on:mouseenter="show_user = true" v-on:mouseleave="show_user = false">
+          <div class="topbar_user_img"/>
+        </div>
+        <div class="topbar_cart" v-on:mouseenter="show_cart = true" v-on:mouseleave="show_cart = false">
+          <div class="topbar_cart_img"/>
+        </div>
 
       </div>
 
     </div>
+    <div class="cart shadow_bg" v-show="show_cart" v-on:mouseenter="show_cart = true"
+         v-on:mouseleave="show_cart = false">
+      <div class="cart_img"/>
+      <div class="cart_tips1">购物车为空</div>
+      <div class="cart_tips2">您还没有选购任何商品，现在前往商城选购吧！</div>
+    </div>
+    <div class="user shadow_bg" v-show="show_user" v-on:mouseenter="show_user = true"
+         v-on:mouseleave="show_user = false">
 
+    </div>
   </div>
 
 
@@ -56,7 +47,13 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+      show_cart: false,//购物车
+      show_user: false//用户
+    }
+  }
 }
 </script>
 
