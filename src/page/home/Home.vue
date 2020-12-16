@@ -26,7 +26,6 @@
         <div class="topbar_cart" v-on:mouseenter="show_cart = true" v-on:mouseleave="show_cart = false">
           <div class="topbar_cart_img"/>
         </div>
-
       </div>
 
     </div>
@@ -37,9 +36,7 @@
       <div class="cart_tips2">您还没有选购任何商品，现在前往商城选购吧！</div>
     </div>
     <div class="user shadow_bg" v-show="show_user" v-on:mouseenter="show_user = true"
-         v-on:mouseleave="show_user = false">
-
-    </div>
+         v-on:mouseleave="show_user = false"/>
   </div>
 
 

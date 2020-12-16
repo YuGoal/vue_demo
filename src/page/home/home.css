@@ -6,6 +6,8 @@
 }
 
 .header_topbar {
+  width: 100vw;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +42,6 @@
 }
 
 .topbar_logo {
-  place-self: center;
   margin-left: 20px;
   width: 40px;
   height: 40px;
@@ -62,7 +63,8 @@
   justify-content: center;
 
 }
-.topbar_user_img{
+
+.topbar_user_img {
   width: 20px;
   height: 20px;
   background: url("/static/images/avatar-and-cart.png") 50% no-repeat;
@@ -78,7 +80,8 @@
   align-items: center;
   justify-content: center;
 }
-.topbar_cart_img{
+
+.topbar_cart_img {
   width: 20px;
   height: 20px;
   background: url("/static/images/avatar-and-cart.png") 50% no-repeat;
