@@ -25,6 +25,14 @@
           trigger="hover">
           <div class="user shadow_bg">
 
+            <div class="user-content">
+
+            </div>
+
+            <ul >
+
+            </ul>
+
           </div>
           <el-button slot="reference" class="topbar_user_img"/>
         </el-popover>

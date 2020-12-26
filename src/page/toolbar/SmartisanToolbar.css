@@ -50,7 +50,7 @@
 
 }
 
-.nav_ul li:hover{
+.nav_ul li:hover {
   color: #ffffff;
 }
 
@@ -161,7 +161,7 @@
   white-space: nowrap;
 }
 
-.sticky_ul li{
+.sticky_ul li {
   font-style: normal;
   list-style: none;
   display: inline;
@@ -170,7 +170,8 @@
   background: transparent;
 
 }
-.sticky_ul li a{
+
+.sticky_ul li a {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   text-decoration: none;
   color: #000000B3;
@@ -185,11 +186,24 @@
 .form {
   height: 36px;
   width: 330px;
-  border : 1px solid rgba(0,0,0,0.18);
+  border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 26px;
 }
 
-.search-wrapper{
+.search-wrapper {
   border: #666666;
   border-radius: 26px;
+}
+
+.user-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.avator-wrapper {
+
+}
+
+.user-link-list {
+
 }
