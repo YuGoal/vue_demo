@@ -13,19 +13,19 @@
     <div class="activities shop_bg">
       <div class="advertise">
         <img class="advertise_img"
-          src="https://resource.smartisan.com/resource/fbefae00ef98859f342e9f56889899a0.jpg?x-oss-process=image/resize,w_600/format,webp">
+             src="https://resource.smartisan.com/resource/fbefae00ef98859f342e9f56889899a0.jpg?x-oss-process=image/resize,w_600/format,webp">
       </div>
       <div class="advertise">
         <img class="advertise_img"
-          src="https://resource.smartisan.com/resource/1023fe9691eaf03abbfd261b36df4985.png?x-oss-process=image/resize,w_600/format,webp">
+             src="https://resource.smartisan.com/resource/1023fe9691eaf03abbfd261b36df4985.png?x-oss-process=image/resize,w_600/format,webp">
       </div>
       <div class="advertise">
         <img class="advertise_img"
-          src="https://resource.smartisan.com/resource/33ea4bfa05068e0741b7278fec9da8a6.jpg?x-oss-process=image/resize,w_600/format,webp">
+             src="https://resource.smartisan.com/resource/33ea4bfa05068e0741b7278fec9da8a6.jpg?x-oss-process=image/resize,w_600/format,webp">
       </div>
       <div class="advertise">
         <img class="advertise_img"
-          src="https://resource.smartisan.com/resource/fdc4370d1ce14a67fadc35d74209ac0f.jpg?x-oss-process=image/resize,w_600/format,webp">
+             src="https://resource.smartisan.com/resource/fdc4370d1ce14a67fadc35d74209ac0f.jpg?x-oss-process=image/resize,w_600/format,webp">
       </div>
     </div>
     <div class="common-normal-box shop_bg">
@@ -36,8 +36,17 @@
           <button class="btn_right"/>
         </div>
       </div>
-      <div  class="common-normal-body">
-
+      <div class="common-normal-body">
+        <div class="spu-item-normal-box">
+          <div class="spu-item-normal-title">买赠</div>
+          <img class="spu-item-normal-img" src="https://resource.smartisan.com/resource/623bad86546352a2035ec704e2faf041.png?x-oss-process=image/resize,w_216/format,webp">
+<!--          <div class="spu-item-normal-name">
+          <div class="spu-item-normal-desc" >
+          <div class="spu-item-normal-price" >-->
+        </div>
+        <div class="spu-item-normal-box"></div>
+        <div class="spu-item-normal-box"></div>
+        <div class="spu-item-normal-box"></div>
       </div>
     </div>
     <div class="common-normal1-box shop_bg">
@@ -117,7 +126,33 @@ export default {
         {image: "https://resource.smartisan.com/resource/bedcb8b9cc461421de8bf1f186d2f150.jpg?x-oss-process=image/resize,w_1220/format,webp/quality,Q_95"},
         {image: "https://resource.smartisan.com/resource/60c1fea58f4116837a644e101fdb7116.png?x-oss-process=image/resize,w_1220/format,webp/quality,Q_95"},
         {image: "https://resource.smartisan.com/resource/d5f455111845c9542f399fa398c451f9.png?x-oss-process=image/resize,w_1220/format,webp/quality,Q_95"}
-      ]
+      ],
+      home_activities: [],
+      home_carousel: [],
+      home_dynamic: [],
+      home_floors: [],
+      home_forum: [],
+      home_hot: [],
+    }
+  },
+  created() {
+    this.getHome()
+  },
+  methods:{
+   async getHome(){
+      this.axios.get("product/home").then(res => {
+        if ( res.data.code === 0) {
+          this.$message.success('获取数据成功')
+          this.home_activities = res.data.home_activities
+          this.home_carousel = res.data.home_carousel
+          this.home_dynamic = res.data.home_dynamic
+          this.home_floors = res.data.home_floors
+          this.home_forum = res.data.home_forum
+          this.home_hot = res.data.home_hot
+        } else {
+            this.$message.error('获取数据失败')
+        }
+      })
     }
   }
 }

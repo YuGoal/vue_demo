@@ -12,7 +12,7 @@ import Qs from 'qs'
 
 
 var axiosInstance = axios.create({
-  baseURL: 'http://192.168.1.111:8080/',
+  baseURL: 'https://shopapi.smartisan.com/',
   transformRequest: function (data) {
     return Qs.stringify(data)
   },
