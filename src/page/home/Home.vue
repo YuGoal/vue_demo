@@ -37,16 +37,13 @@
         </div>
       </div>
       <div class="common-normal-body">
-        <div class="spu-item-normal-box">
+        <div class="spu-item-normal-box" v-for="(item,index) in home_hot" :key="index">
           <div class="spu-item-normal-title">买赠</div>
-          <img class="spu-item-normal-img" src="https://resource.smartisan.com/resource/623bad86546352a2035ec704e2faf041.png?x-oss-process=image/resize,w_216/format,webp">
-<!--          <div class="spu-item-normal-name">
-          <div class="spu-item-normal-desc" >
-          <div class="spu-item-normal-price" >-->
+          <img class="spu-item-normal-img" :src="item.spu.sku_info[0].ali_image">
+          <div class="spu-item-normal-name">{{item.spu.name}}</div>
+          <div class="spu-item-normal-desc" >{{item.spu.shop_info.spu_mobile_sub_title}}</div>
+          <div class="spu-item-normal-price" >￥{{item.spu.price}}</div>
         </div>
-        <div class="spu-item-normal-box"></div>
-        <div class="spu-item-normal-box"></div>
-        <div class="spu-item-normal-box"></div>
       </div>
     </div>
     <div class="common-normal1-box shop_bg">
@@ -143,12 +140,13 @@ export default {
       this.axios.get("product/home").then(res => {
         if ( res.data.code === 0) {
           this.$message.success('获取数据成功')
-          this.home_activities = res.data.home_activities
-          this.home_carousel = res.data.home_carousel
-          this.home_dynamic = res.data.home_dynamic
-          this.home_floors = res.data.home_floors
-          this.home_forum = res.data.home_forum
-          this.home_hot = res.data.home_hot
+          this.home_activities = res.data.data.home_activities
+          this.home_carousel = res.data.data.home_carousel
+          this.home_dynamic = res.data.data.home_dynamic
+          this.home_floors = res.data.data.home_floors
+          this.home_forum = res.data.data.home_forum
+          this.home_hot = res.data.data.home_hot
+          console.log(res.data.data.home_hot[0])
         } else {
             this.$message.error('获取数据失败')
         }
