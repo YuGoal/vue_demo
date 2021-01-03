@@ -11,21 +11,9 @@
 
 
     <div class="activities shop_bg">
-      <div class="advertise">
+      <div class="advertise" v-for="(item,index) in home_activities">
         <img class="advertise_img"
-             src="https://resource.smartisan.com/resource/fbefae00ef98859f342e9f56889899a0.jpg?x-oss-process=image/resize,w_600/format,webp">
-      </div>
-      <div class="advertise">
-        <img class="advertise_img"
-             src="https://resource.smartisan.com/resource/1023fe9691eaf03abbfd261b36df4985.png?x-oss-process=image/resize,w_600/format,webp">
-      </div>
-      <div class="advertise">
-        <img class="advertise_img"
-             src="https://resource.smartisan.com/resource/33ea4bfa05068e0741b7278fec9da8a6.jpg?x-oss-process=image/resize,w_600/format,webp">
-      </div>
-      <div class="advertise">
-        <img class="advertise_img"
-             src="https://resource.smartisan.com/resource/fdc4370d1ce14a67fadc35d74209ac0f.jpg?x-oss-process=image/resize,w_600/format,webp">
+             :src="item.image">
       </div>
     </div>
     <div class="common-normal-box shop_bg">
@@ -36,7 +24,7 @@
           <button class="btn_right"/>
         </div>
       </div>
-      <div class="common-normal-body">
+      <aside class="common-normal-body" >
         <div class="spu-item-normal-box" v-for="(item,index) in home_hot" :key="index">
           <div class="spu-item-normal-title">买赠</div>
           <img class="spu-item-normal-img" :src="item.spu.sku_info[0].ali_image">
@@ -44,61 +32,28 @@
           <div class="spu-item-normal-desc" >{{item.spu.shop_info.spu_mobile_sub_title}}</div>
           <div class="spu-item-normal-price" >￥{{item.spu.price}}</div>
         </div>
-      </div>
-    </div>
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">坚果 R2 及配件</h5>
-      </div>
-    </div>
-
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">Smartisan TNT</h5>
-      </div>
-    </div>
-
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">官方精选配件</h5>
-      </div>
+      </aside>
     </div>
 
 
-    <div class="common-normal1-box shop_bg">
+    <div class="common-normal1-box shop_bg" v-for="(item,index) in home_floors">
       <div class="common-normal-header">
-        <h5 class="header_font">服饰专场</h5>
+        <h5 class="header_font">{{item.title}}</h5>
+      </div>
+      <div class="floors-tabs" >
+
+          <img class="advertise-img"   :src=home_floors[index].tabs[0].tab_items[0].image >
+
+        <div class="spu-item-normal-box" v-for="(tab_items,page) in home_floors[index].tabs[0].tab_items" v-if="page>=1" :key="page">
+          <div class="spu-item-normal-title">买赠</div>
+          <img class="spu-item-normal-img" :src="tab_items.spu.sku_info[0].ali_image">
+          <div class="spu-item-normal-name">{{tab_items.spu.name}}</div>
+          <div class="spu-item-normal-desc" >{{tab_items.spu.sku_info[0].sub_title}}</div>
+          <div class="spu-item-normal-price" >￥{{tab_items.spu.price}}</div>
+        </div>
       </div>
     </div>
 
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">抖音文创</h5>
-      </div>
-    </div>
-
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">箱包</h5>
-      </div>
-    </div>
-
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">足迹系列保护套</h5>
-      </div>
-    </div>
-
-    <div class="common-normal1-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">畅呼吸系列产品</h5>
-      </div>
-    </div>
-    <div class="common-normal2-box shop_bg">
-      <div class="common-normal-header">
-        <h5 class="header_font">论坛精选</h5>
-      </div>
-    </div>
     <div class="footer">
 
     </div>

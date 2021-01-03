@@ -48,6 +48,11 @@
   width: 100%;
 }
 
+.advertise-img{
+  width: 608px;
+  height: 429px;
+}
+
 .common-normal-box {
   margin-top: 30px;
   width: 1220px;
@@ -61,7 +66,7 @@
   width: 1220px;
   height: 921px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .common-normal2-box {
@@ -73,7 +78,7 @@
 }
 
 .common-normal-header {
-  height: 60px;
+  height: 61px;
   width: 100%;
   background: #fafafa;
   border-radius: 10px 10px 0 0;
@@ -81,6 +86,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.floors-tabs{
+  width: 100%;
+  height: 838px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .common-normal-body {
@@ -159,6 +170,7 @@
 .spu-item-normal-desc{
   font-size: 12px;
   color: #999999;
+  word-wrap: normal;
   margin-top: 10px ;
 }
 .spu-item-normal-price{
