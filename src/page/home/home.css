@@ -49,8 +49,10 @@
 }
 
 .advertise-img{
-  width: 608px;
+  width: 609px;
   height: 429px;
+  border-bottom: 1px solid #efefef;
+  border-right: 1px solid #efefef;
 }
 
 .common-normal-box {
@@ -143,19 +145,27 @@
 }
 
 .spu-item-normal-box {
-  width: 304.5px;
+  width: 304px;
   height: 429px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+
 }
 .spu-item-normal-title{
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-top:10px;
   width: 24px;
   font-size: 12px;
   background: #ffe7e5;
   color: #d03b34;
   padding: 0 10px;
   border-radius: 13px;
+  border-color: #f3938b;
+  border: 1px solid;
 }
 .spu-item-normal-img{
   height: 216px;
@@ -165,17 +175,26 @@
 .spu-item-normal-name{
   font-size: 14px;
   color: #333333;
+  width: 287px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  margin-right: 10px;
+  margin-left: 10px;
   margin-top: 20px ;
 }
 .spu-item-normal-desc{
   font-size: 12px;
   color: #999999;
   word-wrap: normal;
+  margin-right: 10px;
+  margin-left: 10px;
   margin-top: 10px ;
 }
 .spu-item-normal-price{
   font-size: 18px;
   color: #D44D44;
-  margin-top: 64px;
+  margin-top: 54px;
 }
 
