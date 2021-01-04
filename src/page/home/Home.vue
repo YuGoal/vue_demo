@@ -24,13 +24,13 @@
           <button class="btn_right"/>
         </div>
       </div>
-      <aside class="common-normal-body" >
+      <aside class="common-normal-body">
         <div class="spu-item-normal-box" v-for="(item,index) in home_hot" :key="index">
           <div class="spu-item-normal-title">买赠</div>
           <img class="spu-item-normal-img" :src="item.spu.sku_info[0].ali_image">
-          <div class="spu-item-normal-name">{{item.spu.name}}</div>
-          <div class="spu-item-normal-desc" >{{item.spu.shop_info.spu_mobile_sub_title}}</div>
-          <div class="spu-item-normal-price" >￥{{item.spu.price}}</div>
+          <div class="spu-item-normal-name">{{ item.spu.name }}</div>
+          <div class="spu-item-normal-desc">{{ item.spu.shop_info.spu_mobile_sub_title }}</div>
+          <div class="spu-item-normal-price">￥{{ item.spu.price }}</div>
         </div>
       </aside>
     </div>
@@ -38,18 +38,19 @@
 
     <div class="common-normal1-box shop_bg" v-for="(item,index) in home_floors">
       <div class="common-normal-header">
-        <h5 class="header_font">{{item.title}}</h5>
+        <h5 class="header_font">{{ item.title }}</h5>
       </div>
-      <div class="floors-tabs" >
+      <div class="floors-tabs">
 
-          <img class="advertise-img"   :src=home_floors[index].tabs[0].tab_items[0].image >
+        <img class="advertise-img" :src=home_floors[index].tabs[0].tab_items[0].image>
 
-        <div class="spu-item-normal-box" v-for="(tab_items,page) in home_floors[index].tabs[0].tab_items" v-if="page>=1" :key="page">
+        <div class="spu-item-normal-box" v-for="(tab_items,page) in home_floors[index].tabs[0].tab_items" v-if="page>=1"
+             :key="page">
           <div class="spu-item-normal-title">买赠</div>
           <img class="spu-item-normal-img" :src="tab_items.spu.sku_info[0].ali_image">
-          <div class="spu-item-normal-name">{{tab_items.spu.name}}</div>
-          <div class="spu-item-normal-desc" >{{tab_items.spu.sku_info[0].sub_title}}</div>
-          <div class="spu-item-normal-price" >￥{{tab_items.spu.price}}</div>
+          <div class="spu-item-normal-name">{{ tab_items.spu.name }}</div>
+          <div class="spu-item-normal-desc">{{ tab_items.spu.sku_info[0].sub_title }}</div>
+          <div class="spu-item-normal-price">￥{{ tab_items.spu.price }}</div>
         </div>
       </div>
     </div>
@@ -83,10 +84,10 @@ export default {
   created() {
     this.getHome()
   },
-  methods:{
-   async getHome(){
+  methods: {
+    async getHome() {
       this.axios.get("product/home").then(res => {
-        if ( res.data.code === 0) {
+        if (res.data.code === 0) {
           this.$message.success('获取数据成功')
           this.home_activities = res.data.data.home_activities
           this.home_carousel = res.data.data.home_carousel
@@ -96,7 +97,7 @@ export default {
           this.home_hot = res.data.data.home_hot
           console.log(res.data.data.home_hot[0])
         } else {
-            this.$message.error('获取数据失败')
+          this.$message.error('获取数据失败')
         }
       })
     }
