@@ -61,6 +61,7 @@
   height: 492px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .common-normal1-box {
