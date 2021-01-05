@@ -20,11 +20,11 @@
       <div class="common-normal-header">
         <h5 class="header_font">热门商品</h5>
         <div class="right-operation">
-          <button class="btn_left"/>
-          <button class="btn_right"/>
+          <button class="btn_left" v-on:click="left" ref="btn_left"/>
+          <button class="btn_right" v-on:click="right" ref="btn_right"/>
         </div>
       </div>
-      <aside class="common-normal-body">
+      <aside class="common-normal-body" ref="box">
         <div class="spu-item-normal-box" v-for="(item,index) in home_hot" :key="index">
           <div class="spu-item-normal-title">买赠</div>
           <img class="spu-item-normal-img" :src="item.spu.sku_info[0].ali_image">
@@ -65,13 +65,14 @@
 
 <script>
 import sm from '../toolbar/SmartisanToolbar.vue'
-
 export default {
   components: {
     sm
   },
   name: "Home",
   data() {
+
+
     return {
       home_activities: [],
       home_carousel: [],
@@ -100,7 +101,15 @@ export default {
           this.$message.error('获取数据失败')
         }
       })
-    }
+    },
+    left(){
+      this.$refs.box.style.transform = 'translateX(-' + 0 + 'px)',
+        this.$refs.btn_left.style.opacity  = '0.3',
+      this.$refs.btn_right.style.opacity  = '1'},
+    right(){
+      this.$refs.box.style.transform = 'translateX(-' + 1218 + 'px)',
+        this.$refs.btn_right.style.opacity  = '0.3',
+        this.$refs.btn_left.style.opacity  = '1'},
   }
 }
 </script>
