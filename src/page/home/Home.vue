@@ -56,7 +56,38 @@
     </div>
 
     <div class="footer">
-
+      <ul  class="item_ul">
+        <li>
+          <h3>订单服务</h3>
+          <div class="item_name">
+            <a>购买指南</a>
+            <a>送货政策</a>
+          </div>
+        </li>
+        <li >
+          <h3>服务支持</h3>
+          <div class="item_name">
+            <a>零售门店</a>
+            <a>自助服务</a>
+            <a>维修门店</a>
+          </div>
+        </li>
+        <li ><h3>媒体中心</h3>
+          <div class="item_name">
+            <a>新闻动态</a>
+            <a>官方视频</a>
+            <a>图片资源</a>
+          </div>
+        </li>
+        <li >
+          <h3>关注我们</h3>
+          <div class="item_name">
+            <a>新浪微博</a>
+            <a>官方微信</a>
+            <a>荣誉奖项</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -65,6 +96,7 @@
 
 <script>
 import sm from '../toolbar/SmartisanToolbar.vue'
+
 export default {
   components: {
     sm
@@ -102,14 +134,16 @@ export default {
         }
       })
     },
-    left(){
+    left() {
       this.$refs.box.style.transform = 'translateX(-' + 0 + 'px)',
-        this.$refs.btn_left.style.opacity  = '0.3',
-      this.$refs.btn_right.style.opacity  = '1'},
-    right(){
+        this.$refs.btn_left.style.opacity = '0.3',
+        this.$refs.btn_right.style.opacity = '1'
+    },
+    right() {
       this.$refs.box.style.transform = 'translateX(-' + 1218 + 'px)',
-        this.$refs.btn_right.style.opacity  = '0.3',
-        this.$refs.btn_left.style.opacity  = '1'},
+        this.$refs.btn_right.style.opacity = '0.3',
+        this.$refs.btn_left.style.opacity = '1'
+    },
   }
 }
 </script>
