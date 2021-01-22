@@ -56,38 +56,56 @@
     </div>
 
     <div class="footer">
-      <ul  class="item_ul">
-        <li>
-          <h3>订单服务</h3>
-          <div class="item_name">
-            <a>购买指南</a>
-            <a>送货政策</a>
+      <div class="footer_center">
+        <ul class="item_ul">
+          <li>
+            <h4 class="item_h3">订单服务</h4>
+            <div class="item_name">
+              <a class="item_a" href="https://www.smartisan.com/support/#/instruction" target="_blank">购买指南</a>
+              <a class="item_a">送货政策</a>
+            </div>
+          </li>
+          <li>
+            <h3 class="item_h3">服务支持</h3>
+            <div class="item_name">
+              <a class="item_a">零售门店</a>
+              <a class="item_a">自助服务</a>
+              <a class="item_a">维修门店</a>
+            </div>
+          </li>
+          <li><h3 class="item_h3">媒体中心</h3>
+            <div class="item_name">
+              <a class="item_a">新闻动态</a>
+              <a class="item_a">官方视频</a>
+              <a class="item_a">图片资源</a>
+            </div>
+          </li>
+          <li>
+            <h3 class="item_h3">关注我们</h3>
+            <div class="item_name">
+              <a class="item_a">新浪微博</a>
+              <a class="item_a">官方微信</a>
+              <a class="item_a">荣誉奖项</a>
+            </div>
+          </li>
+        </ul>
+        <div class="footer_server">
+          <h1 class="h1-tel">
+            400 - 603 - 5000
+          </h1>
+          <h2 class="h2-time">
+            周一到周日 9:00 - 18:00
+          </h2>
+          <h2 class="h2-time">
+            (仅收市话费)
+          </h2>
+
+          <div class="online">
+            在线帮助
           </div>
-        </li>
-        <li >
-          <h3>服务支持</h3>
-          <div class="item_name">
-            <a>零售门店</a>
-            <a>自助服务</a>
-            <a>维修门店</a>
-          </div>
-        </li>
-        <li ><h3>媒体中心</h3>
-          <div class="item_name">
-            <a>新闻动态</a>
-            <a>官方视频</a>
-            <a>图片资源</a>
-          </div>
-        </li>
-        <li >
-          <h3>关注我们</h3>
-          <div class="item_name">
-            <a>新浪微博</a>
-            <a>官方微信</a>
-            <a>荣誉奖项</a>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 
