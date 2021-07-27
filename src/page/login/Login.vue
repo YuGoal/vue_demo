@@ -6,7 +6,7 @@
         <img class="title_img" src="static/images/login_title1.png">
         <h4 class="title_text">使用 Smartisan ID 登录官网</h4>
         <input
-          class="input" maxlength="11" type="text" @input="inputAccout" v-model="accout" placeholder="请输入账号">
+          class="input" type="text" @input="inputAccout" v-model="accout" placeholder="请输入账号">
 
         <div class="input">
           <input maxlength="20" class="pwd_input" :type="pwdType?'password':'text'" @input="inputAccout"
@@ -85,13 +85,16 @@ export default {
       } else if (this.password === '') {
         this.$notify.error({title: '登录', message: '密码不能为空'})
       } else {
+        this.$router.replace({
+          path: '/home'
+        })
         this.showLoading = true
         this.axios.post('user/login', {
           'account': this.accout,
           'password': this.password
         }).then(res => {
           this.loginBean = res.data
-          if (this.loginBean.code == 200) {
+          if (this.loginBean.code === 200) {
             localStorage.userData = this.loginBean.data
             this.$router.replace({
               path: '/home'
