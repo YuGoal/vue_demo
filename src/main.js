@@ -10,13 +10,11 @@ import router from './router'
 import Qs from 'qs'
 
 
-
 var axiosInstance = axios.create({
   baseURL: 'https://shopapi.smartisan.com/',
   transformRequest: function (data) {
     return Qs.stringify(data)
   },
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 })
 
 Vue.config.productionTip = false
